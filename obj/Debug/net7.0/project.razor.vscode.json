@@ -24100,6 +24100,16 @@
       "FilePath": "c:\\RunGroopWebApp\\RunGroopWebApp\\Views\\Race\\Edit.cshtml",
       "TargetPath": "Views\\Race\\Edit.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\RunGroopWebApp\\RunGroopWebApp\\Views\\Club\\Delete.cshtml",
+      "TargetPath": "Views\\Club\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\RunGroopWebApp\\RunGroopWebApp\\Views\\Race\\Delete.cshtml",
+      "TargetPath": "Views\\Race\\Delete.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }
