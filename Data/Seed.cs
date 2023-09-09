@@ -14,7 +14,8 @@ namespace RunGroopWebApp.Data
                 var context = serviceScope.ServiceProvider.GetService<ApplicationDbContext>();
 
                 context.Database.EnsureCreated();
-
+                Console.WriteLine("I'm Here");
+                
                 if (!context.Clubs.Any())
                 {
                     context.Clubs.AddRange(new List<Club>()
@@ -34,7 +35,7 @@ namespace RunGroopWebApp.Data
                          },
                         new Club()
                         {
-                            Title = "Running Club 2",
+                            Title = "Deneme",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first cinema",
                             ClubCategory = ClubCategory.Endurance,
@@ -70,7 +71,21 @@ namespace RunGroopWebApp.Data
                                 City = "Michigan",
                                 State = "NC"
                             }
+                        },
+                         new Club()
+                        {
+                            Title = "Mete",
+                            Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
+                            Description = "This is the description of the first club",
+                            ClubCategory = ClubCategory.City,
+                            Address = new Address()
+                            {
+                                Street = "MustafaBey Sokak",
+                                City = "İstanbul",
+                                State = "Turkey"
+                            }
                         }
+
                     });
                     context.SaveChanges();
                 }

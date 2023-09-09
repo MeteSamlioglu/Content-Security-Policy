@@ -42,6 +42,11 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.Use(async (context, next) =>
+{   
+    context.Response.Headers.Add("Content-Security-Policy", "{POLICY STRING}");
+    await next( );
+});
 
 app.MapControllerRoute(
     name: "default",

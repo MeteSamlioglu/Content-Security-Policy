@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using RunGroopWebApp.Data;
 using RunGroopWebApp.Interfaces;
 using RunGroopWebApp.Models;
-
+using System;
 
 namespace RunGroopWebApp.Repository
 {   
@@ -30,12 +30,17 @@ namespace RunGroopWebApp.Repository
         public async Task<IEnumerable<Club>> GetAll( )
         {
             return await _context.Clubs.ToListAsync();
-         }
+        }
 
         public async Task<Club> GetByIdAsync(int id)
         {
             return await _context.Clubs.Include(i => i.Address).FirstOrDefaultAsync(i => i.Id == id);
         }
+        public async Task<Club> GetByIdAsyncNoTracking(int id)
+        {
+            return await _context.Clubs.Include(i => i.Address).AsNoTracking().FirstOrDefaultAsync(i => i.Id == id);
+        }
+
         public async Task<IEnumerable<Club>> GetClubByCity(string city)
         {
             return await _context.Clubs.Where(c => c.Address.City.Contains(city)).ToListAsync();
