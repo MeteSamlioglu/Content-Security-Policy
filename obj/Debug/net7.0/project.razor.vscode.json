@@ -24110,6 +24110,11 @@
       "FilePath": "c:\\RunGroopWebApp\\RunGroopWebApp\\Views\\Race\\Delete.cshtml",
       "TargetPath": "Views\\Race\\Delete.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\RunGroopWebApp\\RunGroopWebApp\\Views\\Account\\Login.cshtml",
+      "TargetPath": "Views\\Account\\Login.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }
