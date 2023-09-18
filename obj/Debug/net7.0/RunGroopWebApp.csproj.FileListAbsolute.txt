@@ -79,3 +79,8 @@ C:\RunGroopWebApp\RunGroopWebApp\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.
 C:\RunGroopWebApp\RunGroopWebApp\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\RunGroopWebApp\RunGroopWebApp\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\RunGroopWebApp\RunGroopWebApp\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+c:\RunGroopWebApp\RunGroopWebApp\bin\Debug\net7.0\HtmlAgilityPack.dll
+C:\RunGroopWebApp\RunGroopWebApp\bin\Debug\net7.0\Newtonsoft.Json.dll
+c:\RunGroopWebApp\RunGroopWebApp\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+c:\RunGroopWebApp\RunGroopWebApp\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+c:\RunGroopWebApp\RunGroopWebApp\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

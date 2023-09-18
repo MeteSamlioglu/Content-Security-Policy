@@ -12,3 +12,19 @@
           </p>
         </div>
     </section>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self';">
+    <title>CSP Test Page</title>
+</head>
+<body>
+    <h1>CSP Test Page</h1>
+    <script>
+        // This is a safe inline script allowed by the CSP policy
+        console.log('This inline script is allowed by CSP.');
+    </script>
+    <script src="/your-allowed-script.js"></script>
+</body>
+</html> 

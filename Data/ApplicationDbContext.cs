@@ -14,6 +14,8 @@ namespace RunGroopWebApp.Data
         public DbSet<Club> Clubs {get; set;}
         public DbSet<Address> Addresses {get; set; }
 
+        public DbSet<CspViolationModel> CspViolationModels {get; set;}
+
     }
     
 }

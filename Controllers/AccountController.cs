@@ -56,7 +56,47 @@ namespace RunGroopWebApp.Controllers
             return View(loginViewModel);
         }
 
+        [HttpGet]
+        public IActionResult Register( )
+        {
+            var response = new RegisterViewModel( );
+            return View( );
+        }
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel registerViewModel)
+        {
+            /* 
+                If you don't know what ModelState is a static class that provides information about model state.
+                Modelstate is when you post(sometimes get) what is gonna happen is the values that you post or you sent to the
+                controller or end point is going to be passed in logically into registerViewModel. Imagine like it is coming in through
+                your web page and the web page is going to insert those values into this function it will put those values into 
+                registerViewModel
+            */
+            if(!ModelState.IsValid) return View(registerViewModel);
 
-
+            /* This function will return an AppUser object or null */
+            var user = await _userManager.FindByEmailAsync(registerViewModel.EmailAddress);
+            if (user != null)
+            {
+                TempData["Error"] = "This email address is already in use";
+                return View(registerViewModel);
+            }
+            var newUser = new AppUser( )
+            {
+                Email = registerViewModel.EmailAddress,
+                UserName = registerViewModel.EmailAddress
+            };
+            var newUserResponse = await _userManager.CreateAsync(newUser, registerViewModel.Password);
+            if(newUserResponse.Succeeded)
+                await _userManager.AddToRoleAsync(newUser, UserRoles.User);
+        
+            return RedirectToAction("Index", "Race");
+        }
+        [HttpPost]
+        public async Task<IActionResult> Logout( )
+        {
+            await _signInManager.SignOutAsync( );
+            return RedirectToAction("Index", "Race");
+        }
     }
 }
