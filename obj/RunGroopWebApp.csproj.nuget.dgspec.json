@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\RunGroopWebApp\\RunGroopWebApp\\RunGroopWebApp.csproj": {}
+    "C:\\RunGroopWebApp\\RunGroopWebApp\\RunGroopWebApp.csproj": {}
   },
   "projects": {
-    "c:\\RunGroopWebApp\\RunGroopWebApp\\RunGroopWebApp.csproj": {
+    "C:\\RunGroopWebApp\\RunGroopWebApp\\RunGroopWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\RunGroopWebApp\\RunGroopWebApp\\RunGroopWebApp.csproj",
+        "projectUniqueName": "C:\\RunGroopWebApp\\RunGroopWebApp\\RunGroopWebApp.csproj",
         "projectName": "RunGroopWebApp",
-        "projectPath": "c:\\RunGroopWebApp\\RunGroopWebApp\\RunGroopWebApp.csproj",
+        "projectPath": "C:\\RunGroopWebApp\\RunGroopWebApp\\RunGroopWebApp.csproj",
         "packagesPath": "C:\\Users\\Monster\\.nuget\\packages\\",
-        "outputPath": "c:\\RunGroopWebApp\\RunGroopWebApp\\obj\\",
+        "outputPath": "C:\\RunGroopWebApp\\RunGroopWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Monster\\AppData\\Roaming\\NuGet\\NuGet.Config",

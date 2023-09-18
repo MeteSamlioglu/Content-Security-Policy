@@ -23,7 +23,7 @@ namespace RunGroopWebApp.Controllers
         {
         
             Console.WriteLine("Hello ! ");
-            //var report = cspReportRequest.cspReport;
+            var report = cspReportRequest.CspReportData;
             using (StreamReader reader = new StreamReader(HttpContext.Request.Body))
             {
                 var json = await reader.ReadToEndAsync();
@@ -42,17 +42,31 @@ namespace RunGroopWebApp.Controllers
                 return BadRequest(ModelState);
             }
 
-            // Log or process the violation report details as needed
-            // string documenturi = report.DocumentUri;
-            // string referrer = report.Referrer;
-            // string blockeduri = report.BlockedUri;
-            // string originalpolicy = report.OriginalPolicy;
-            // Console.WriteLine("Received CSP Violation Report:");
-            // Console.WriteLine("Document URI: {0}", documenturi);
-            // Console.WriteLine("Referrer: {0}", referrer);
-            // Console.WriteLine("Blocked URI: {0}", blockeduri);
-            // Console.WriteLine("Original Policy: {0}", originalpolicy);
-            // Console.WriteLine("I'm Here !");
+            string blockedUri = report.BlockedUri;
+            string disposition = report.Disposition;
+            string documenturi = report.DocumentUri;
+            string referrer = report.Referrer;
+            string effectiveDirective = report.EffectiveDirective;
+            string lineNumber = report.LineNumber;
+            string originalpolicy = report.OriginalPolicy;
+            string scriptSample = report.ScriptSample;
+            string sourceFile = report.SourceFile;
+            string statusCode = report.StatusCode;
+            string violatedDirective = report.ViolatedDirective;
+
+            Console.WriteLine("Received CSP Violation Report:\n");
+            Console.WriteLine("blocked-uri: {0}\n", blockedUri);
+            Console.WriteLine("disposition: {0}\n", disposition);
+            Console.WriteLine("document-uri: {0}\n", documenturi);
+            Console.WriteLine("effective-directive: {0}\n", effectiveDirective);
+            Console.WriteLine("line-number: {0}\n", lineNumber);
+            Console.WriteLine("original-policy: {0}\n", originalpolicy);
+            Console.WriteLine("referrer: {0}\n", referrer);
+            Console.WriteLine("script-sample: {0}\n", scriptSample);
+            Console.WriteLine("source-file: {0}\n", sourceFile);
+            Console.WriteLine("status-code: {0}\n", statusCode);
+            Console.WriteLine("violated-directive: {0}\n", violatedDirective);
+
             return Ok();
         }        
 

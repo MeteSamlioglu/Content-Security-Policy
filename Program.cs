@@ -9,10 +9,23 @@ using HtmlAgilityPack;
 using System.Text;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-
+using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddControllersWithViews();
+builder.Services.AddControllers().AddJsonOptions(c =>
+            {
+                c.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+            }).AddNewtonsoftJson(c =>
+            {
+                c.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+                c.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None;
+                c.SerializerSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Populate;
+                c.SerializerSettings.TypeNameHandling = Newtonsoft.Json.TypeNameHandling.None;
+                c.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });;
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllers();
 
