@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k5Va70kr6Pra03PHUvOad0C+k9aG0jyDvQMeP0Muc1/uvy1yP5MuFHuoSTcxQU2DD18LB1UBTXln5Co/XvkwKg==",
+  "dgSpecHash": "59gKQvlQspi8vHY8nGjILbV6UVeO6B/NitYJJUQ04lRP9X8cUwv11eciU8DnatRlRVzmaP8uMX3ruy8XVWimRA==",
   "success": true,
-  "projectFilePath": "C:\\RunGroopWebApp\\RunGroopWebApp\\RunGroopWebApp.csproj",
+  "projectFilePath": "c:\\RunGroopWebApp\\RunGroopWebApp\\RunGroopWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Monster\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Monster\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

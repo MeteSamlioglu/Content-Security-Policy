@@ -26,8 +26,6 @@ builder.Services.AddControllers().AddJsonOptions(c =>
                 c.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });;
 
-builder.Services.AddControllersWithViews();
-builder.Services.AddControllers();
 
 builder.Services.AddScoped<IClubRepository, ClubRepository>( );
 
@@ -99,4 +97,3 @@ app.MapControllerRoute(
 
 app.Run();
 
-    

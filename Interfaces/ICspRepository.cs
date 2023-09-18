@@ -9,6 +9,8 @@ namespace RunGroopWebApp.Interfaces
     public interface ICspRepository
     {
         
+        Task<IEnumerable<CspViolationModel>> GetAll();
+
         Task<CspViolationModel> GetByIdAsync(int id);
         
         bool Add(CspViolationModel _cspViolationModel);

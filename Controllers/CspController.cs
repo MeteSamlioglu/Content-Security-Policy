@@ -66,7 +66,21 @@ namespace RunGroopWebApp.Controllers
             Console.WriteLine("source-file: {0}\n", sourceFile);
             Console.WriteLine("status-code: {0}\n", statusCode);
             Console.WriteLine("violated-directive: {0}\n", violatedDirective);
-
+            CspViolationModel cspModel = new CspViolationModel
+            {
+                BlockedUri = blockedUri,
+                Disposition = disposition,
+                DocumentUri = documenturi,
+                EffectiveDirective = effectiveDirective,
+                LineNumber = lineNumber,
+                OriginalPolicy = originalpolicy,
+                Referrer = referrer,
+                ScriptSample = scriptSample,
+                SourceFile = sourceFile,
+                StatusCode = statusCode,
+                ViolatedDirective = violatedDirective,
+            };
+            _cspRepository.Add(cspModel);
             return Ok();
         }        
 
